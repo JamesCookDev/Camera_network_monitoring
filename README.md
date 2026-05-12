@@ -24,50 +24,6 @@ Ele pode:
 - `test_worker_payload.py`: teste local do parser e payload
 - `.gitignore`: impede envio de arquivos locais e sensiveis
 
-Arquivos locais que nao devem subir para o Git:
-
-- `.env`
-- `cameras.json`
-- `.venv/`
-- `snapshots/`
-- `__pycache__/`
-- logs e arquivos temporarios
-
-## Instalacao
-
-Crie e ative um ambiente virtual, se desejar:
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\activate
-```
-
-Instale as dependencias:
-
-```powershell
-pip install -r requirements.txt
-```
-
-## Configuracao local
-
-Copie o exemplo de ambiente:
-
-```powershell
-copy .env.example .env
-```
-
-Copie o exemplo de cameras:
-
-```powershell
-copy cameras.example.json cameras.json
-```
-
-Depois edite localmente:
-
-- `.env`: intervalos, modo de execucao e chave da API, se for usar envio externo
-- `cameras.json`: IPs, nomes e URLs RTSP reais das cameras
-
-Esses dois arquivos estao no `.gitignore` porque podem conter dados sensiveis.
 
 ## Exemplo de camera
 
@@ -82,8 +38,6 @@ Esses dois arquivos estao no `.gitignore` porque podem conter dados sensiveis.
   }
 ]
 ```
-
-Troque `SENHA_AQUI` apenas no seu `cameras.json` local.
 
 ## Rodar um teste
 
@@ -122,19 +76,3 @@ Ou seja:
 
 - Ping a cada 3 minutos
 - Teste RTSP a cada 5 minutos
-
-## Seguranca
-
-Nunca envie para o GitHub:
-
-- Chaves de API
-- Arquivos `.env`
-- Senhas RTSP
-- `cameras.json` real
-- Imagens de snapshots, caso revelem ambiente interno
-
-Se alguma chave ou senha ja foi commitada ou compartilhada, considere exposta e gere uma nova.
-
-## Observacao
-
-Este repositorio nao precisa conter dados reais das cameras. Para documentacao e backup do codigo, mantenha apenas os arquivos de exemplo com placeholders.
