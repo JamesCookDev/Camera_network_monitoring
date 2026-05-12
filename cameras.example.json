@@ -1,0 +1,261 @@
+[
+    {
+        "name":  "CAMERA_192_176_213_101",
+        "ip":  "192.176.213.101",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.101:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_102",
+        "ip":  "192.176.213.102",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.102:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_103",
+        "ip":  "192.176.213.103",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.103:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_104",
+        "ip":  "192.176.213.104",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.104:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_105",
+        "ip":  "192.176.213.105",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.105:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_106",
+        "ip":  "192.176.213.106",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.106:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_107",
+        "ip":  "192.176.213.107",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.107:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_108",
+        "ip":  "192.176.213.108",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.108:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_109",
+        "ip":  "192.176.213.109",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.109:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_110",
+        "ip":  "192.176.213.110",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.110:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_111",
+        "ip":  "192.176.213.111",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.111:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_112",
+        "ip":  "192.176.213.112",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.112:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_113",
+        "ip":  "192.176.213.113",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.113:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_114",
+        "ip":  "192.176.213.114",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.114:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_115",
+        "ip":  "192.176.213.115",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.115:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_116",
+        "ip":  "192.176.213.116",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.116:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_117",
+        "ip":  "192.176.213.117",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.117:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_127",
+        "ip":  "192.176.213.127",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.127:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_140",
+        "ip":  "192.176.213.140",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.140:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_141",
+        "ip":  "192.176.213.141",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.141:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_142",
+        "ip":  "192.176.213.142",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.142:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_143",
+        "ip":  "192.176.213.143",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.143:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_144",
+        "ip":  "192.176.213.144",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.144:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_145",
+        "ip":  "192.176.213.145",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.145:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_146",
+        "ip":  "192.176.213.146",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.146:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_147",
+        "ip":  "192.176.213.147",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.147:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_148",
+        "ip":  "192.176.213.148",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.148:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_149",
+        "ip":  "192.176.213.149",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.149:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_150",
+        "ip":  "192.176.213.150",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.150:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_151",
+        "ip":  "192.176.213.151",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.151:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_210",
+        "ip":  "192.176.213.210",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.210:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_211",
+        "ip":  "192.176.213.211",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.211:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_212",
+        "ip":  "192.176.213.212",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.212:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_213",
+        "ip":  "192.176.213.213",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.213:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_214",
+        "ip":  "192.176.213.214",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.214:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_215",
+        "ip":  "192.176.213.215",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.215:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    },
+    {
+        "name":  "CAMERA_192_176_213_216",
+        "ip":  "192.176.213.216",
+        "rtsp_url":  "rtsp://admin:SENHA_AQUI@192.176.213.216:554/cam/realmonitor?channel=1\u0026subtype=1",
+        "location":  "",
+        "enabled":  true
+    }
+]

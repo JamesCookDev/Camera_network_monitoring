@@ -1,0 +1,109 @@
+## py_compile
+returncode=0
+STDOUT:
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/generated/interface/models.py", line 48821, in hydrate_crdt_from_proto
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/remote.py", line 747, in __call__
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
+
+
+## payload_test
+returncode=0
+STDOUT:
+[OK] Parser ICMP, payload SIGZEL API v2 e máscara RTSP validados.
+{
+  "name": "CAMERA_TESTE_192_168_0_236",
+  "status": "online",
+  "notes": "Camera de teste local; classificacao_icmp=OK - rede saudavel; ttl=64; snapshot_res=640x360",
+  "reachable": true,
+  "latency_min_ms": 10.0,
+  "latency_avg_ms": 12.0,
+  "latency_max_ms": 20.0,
+  "packet_loss_pct": 0.0,
+  "jitter_ms": 10.0,
+  "consecutive_failures": 0,
+  "consecutive_successes": 1,
+  "icmp_status": "online",
+  "last_response_at": "2026-05-08T18:35:39Z",
+  "rtsp_url": "rtsp://admin:***@192.168.0.236:554/cam/realmonitor?channel=1&subtype=1",
+  "connection_ok": true,
+  "frame_captured": true,
+  "attempt_duration_ms": 812,
+  "snapshot_path": "snapshots/CAMERA_TESTE_192_168_0_236_latest.jpg",
+  "snapshot_size_bytes": 184320,
+  "snapshot_status": "ok",
+  "rtsp_error": null
+}
+[OK] Payload de cadastro de câmera validado.
+{
+  "name": "CAMERA_TESTE_192_168_0_236",
+  "ip_address": "192.168.0.236",
+  "status": "pendente",
+  "notes": "Camera de teste local"
+}
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/generated/interface/models.py", line 48821, in hydrate_crdt_from_proto
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/remote.py", line 747, in __call__
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
+
+
+## validate_config
+returncode=0
+STDOUT:
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/generated/interface/models.py", line 48821, in hydrate_crdt_from_proto
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/remote.py", line 747, in __call__
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
+2026-05-08 22:25:06,336 | INFO | Arquivo de câmeras carregado: cameras.json
+2026-05-08 22:25:06,336 | INFO | Total de câmeras habilitadas: 1
+2026-05-08 22:25:06,336 | INFO | OK config | name=CAMERA_TESTE_192_168_0_236 | ip=192.168.0.236 | rtsp=rtsp://admin:***@192.168.0.236:554/cam/realmonitor?channel=1&subtype=1
+
+
+## sync_cameras_dry_run
+returncode=0
+STDOUT:
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/generated/interface/models.py", line 48821, in hydrate_crdt_from_proto
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/remote.py", line 747, in __call__
+  File "/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
+2026-05-08 22:25:13,549 | INFO | Arquivo de câmeras carregado: cameras.json
+2026-05-08 22:25:13,549 | INFO | Total de câmeras habilitadas: 1
+2026-05-08 22:25:13,549 | INFO | Sincronizando cadastro de 1 câmera(s) do cameras.json com o SIGZEL
+2026-05-08 22:25:13,549 | INFO | DRY RUN ativo. Cadastro não enviado. Payload create: {"name": "CAMERA_TESTE_192_168_0_236", "location": "TESTE", "ip_address": "192.168.0.236", "status": "pendente", "notes": "Camera de teste local"}
+2026-05-08 22:25:13,750 | INFO | Sincronização de cadastro concluída: sucesso=1 | falha=0
+
+
+
+FINAL_RESULT=OK
