@@ -1,86 +1,117 @@
-# SIGZEL CFTV Worker API v2
+# Monitoramento de rede das cameras
 
-Worker 24/7 para monitorar câmeras IP por ICMP e RTSP, compatível com a nova API CFTV SIGZEL.
+Script em Python para monitorar cameras IP na rede local. Este repositorio esta no GitHub apenas para documentar o funcionamento e manter uma copia segura do codigo, sem chaves, senhas ou configuracoes reais.
 
-## O que ele faz
+## Objetivo
 
-- Lê as câmeras do `cameras.json`.
-- Executa ICMP/ping para medir:
-  - reachable
-  - latency_min_ms
-  - latency_avg_ms
-  - latency_max_ms
-  - packet_loss_pct
-  - jitter_ms
-  - consecutive_failures
-  - consecutive_successes
-  - last_response_at
-  - icmp_status
+O script executa verificacoes periodicas nas cameras configuradas e registra o estado de rede de cada uma.
 
-- Executa RTSP sem streaming contínuo:
-  - abre a conexão RTSP
-  - captura apenas 1 frame
-  - fecha a conexão
-  - mede attempt_duration_ms
-  - salva somente a última imagem por câmera por padrão
+Ele pode:
 
-- Envia para o SIGZEL via:
-  - POST /functions/v1/cftv-worker?action=bulk_update
+- Ler a lista local de cameras em `cameras.json`
+- Testar conectividade por ping/ICMP
+- Medir perda de pacotes, latencia e jitter
+- Testar acesso RTSP capturando um frame
+- Salvar snapshots localmente, se configurado
+- Rodar uma vez para teste ou ficar em execucao continua
 
-## Arquivos
+## Arquivos do projeto
 
-- `sigzel_cftv_worker.py`: worker principal
-- `cameras.json`: câmeras cadastradas
-- `.env.example`: exemplo de configuração
-- `requirements.txt`: dependências
-- `test_worker_payload.py`: teste local de coerência do payload
+- `sigzel_cftv_worker.py`: script principal de monitoramento
+- `requirements.txt`: dependencias Python
+- `.env.example`: modelo de configuracao sem credenciais
+- `cameras.example.json`: modelo de cameras sem senhas reais
+- `test_worker_payload.py`: teste local do parser e payload
+- `.gitignore`: impede envio de arquivos locais e sensiveis
 
-## Como instalar
+Arquivos locais que nao devem subir para o Git:
 
-```bash
+- `.env`
+- `cameras.json`
+- `.venv/`
+- `snapshots/`
+- `__pycache__/`
+- logs e arquivos temporarios
+
+## Instalacao
+
+Crie e ative um ambiente virtual, se desejar:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\activate
+```
+
+Instale as dependencias:
+
+```powershell
 pip install -r requirements.txt
 ```
 
-## Como configurar
+## Configuracao local
 
-Copie o `.env.example` para `.env`.
-
-Windows PowerShell:
+Copie o exemplo de ambiente:
 
 ```powershell
 copy .env.example .env
 ```
 
-Linux:
+Copie o exemplo de cameras:
 
-```bash
-cp .env.example .env
+```powershell
+copy cameras.example.json cameras.json
 ```
 
-## Teste sem enviar ao SIGZEL
+Depois edite localmente:
 
-No `.env`, deixe:
+- `.env`: intervalos, modo de execucao e chave da API, se for usar envio externo
+- `cameras.json`: IPs, nomes e URLs RTSP reais das cameras
 
-```env
-SIGZEL_DRY_RUN=true
-SIGZEL_WORKER_KEY=
+Esses dois arquivos estao no `.gitignore` porque podem conter dados sensiveis.
+
+## Exemplo de camera
+
+```json
+[
+  {
+    "name": "CAMERA_192_168_0_10",
+    "ip": "192.168.0.10",
+    "rtsp_url": "rtsp://admin:SENHA_AQUI@192.168.0.10:554/cam/realmonitor?channel=1&subtype=1",
+    "location": "Portaria",
+    "enabled": true
+  }
+]
 ```
 
-Depois rode:
+Troque `SENHA_AQUI` apenas no seu `cameras.json` local.
 
-```bash
+## Rodar um teste
+
+Executa um ciclo unico:
+
+```powershell
 python sigzel_cftv_worker.py --once
 ```
 
-Isso executa um ciclo único e mostra o payload no terminal sem enviar ao SIGZEL.
+Validar o arquivo de cameras:
 
-## Rodar 24/7
+```powershell
+python sigzel_cftv_worker.py --validate-config
+```
 
-```bash
+Rodar teste local do payload:
+
+```powershell
+python test_worker_payload.py
+```
+
+## Rodar continuamente
+
+```powershell
 python sigzel_cftv_worker.py
 ```
 
-Por padrão:
+Por padrao, os intervalos sao:
 
 ```env
 ICMP_INTERVAL_SECONDS=180
@@ -89,123 +120,21 @@ RTSP_INTERVAL_SECONDS=300
 
 Ou seja:
 
-- ICMP a cada 3 minutos.
-- RTSP frame a cada 5 minutos.
+- Ping a cada 3 minutos
+- Teste RTSP a cada 5 minutos
 
-Se quiser tudo a cada 5 minutos:
+## Seguranca
 
-```env
-ICMP_INTERVAL_SECONDS=300
-RTSP_INTERVAL_SECONDS=300
-```
+Nunca envie para o GitHub:
 
-## Enviar de verdade para o SIGZEL
+- Chaves de API
+- Arquivos `.env`
+- Senhas RTSP
+- `cameras.json` real
+- Imagens de snapshots, caso revelem ambiente interno
 
-No `.env`:
+Se alguma chave ou senha ja foi commitada ou compartilhada, considere exposta e gere uma nova.
 
-```env
-SIGZEL_DRY_RUN=false
-SIGZEL_WORKER_KEY=SUA_CHAVE_AQUI
-```
+## Observacao
 
-Ou:
-
-```env
-CFTV_WORKER_API_KEY=SUA_CHAVE_AQUI
-```
-
-## Segurança sobre RTSP
-
-Por padrão:
-
-```env
-SEND_RTSP_CREDENTIALS=false
-```
-
-Assim o worker usa a URL RTSP completa localmente, mas envia ao SIGZEL a URL com senha mascarada.
-
-Exemplo:
-
-```text
-rtsp://admin:***@192.168.0.236:554/cam/realmonitor?channel=1&subtype=1
-```
-
-Se o SIGZEL precisar armazenar a URL completa, altere para:
-
-```env
-SEND_RTSP_CREDENTIALS=true
-```
-
-## Câmera de teste
-
-O `cameras.json` vem com:
-
-```json
-[
-  {
-    "name": "CAMERA_TESTE_192_168_0_236",
-    "ip": "192.168.0.236",
-    "rtsp_url": "rtsp://admin:SENHA@192.168.0.236:554/cam/realmonitor?channel=1&subtype=1",
-    "location": "TESTE",
-    "enabled": true,
-    "notes": "Camera de teste local"
-  }
-]
-```
-
-Troque `SENHA` pela senha real da câmera.
-
-## Testar a coerência do payload
-
-```bash
-python test_worker_payload.py
-```
-
-Esse teste valida:
-
-- parser ICMP Windows
-- campos da nova API SIGZEL
-- payload bulk_update
-- máscara de senha RTSP
-
-
-## Cadastrar automaticamente as câmeras do cameras.json no SIGZEL
-
-Para cadastrar as câmeras antes de monitorar, configure no `.env`:
-
-```env
-SIGZEL_DRY_RUN=false
-SIGZEL_WORKER_KEY=SUA_CHAVE_AQUI
-```
-
-Depois execute:
-
-```bash
-python sigzel_cftv_worker.py --sync-cameras
-```
-
-Isso usa o endpoint:
-
-```text
-POST /functions/v1/cftv-worker
-```
-
-E envia para cada câmera:
-
-```json
-{
-  "name": "Nome da câmera",
-  "location": "Localização",
-  "ip_address": "IP da câmera",
-  "status": "pendente",
-  "notes": "Observação"
-}
-```
-
-Se quiser que o worker tente cadastrar as câmeras sempre que iniciar, use:
-
-```env
-AUTO_SYNC_CAMERAS=true
-```
-
-Recomendação: use `--sync-cameras` uma vez para cadastro inicial. Depois deixe `AUTO_SYNC_CAMERAS=false` em produção, a menos que você queira sincronização automática a cada reinício.
+Este repositorio nao precisa conter dados reais das cameras. Para documentacao e backup do codigo, mantenha apenas os arquivos de exemplo com placeholders.
